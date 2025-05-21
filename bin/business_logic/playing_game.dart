@@ -1,14 +1,17 @@
 import 'dart:io';
 
+import 'choosing_mode.dart';
 import 'players_markers.dart';
 import 'moving_player.dart';
 import 'printing_board.dart';
 
 class PlayingGame {
-  final PlayerMarkers _playerMarkers = PlayerMarkers();
-  final PrintingBoard _printingBoard = PrintingBoard();
-  final MovingPlayer _movingPlayer = MovingPlayer();
+  final PlayerMarkers _playerMarkers;
+  final PrintingBoard _printingBoard;
+  final MovingPlayer _movingPlayer;
 
+  PlayingGame(this._playerMarkers, this._printingBoard, this._movingPlayer);
+  
   void playGame() {
     while (true) {
       _printingBoard.printBoard(); // Display the board after each move

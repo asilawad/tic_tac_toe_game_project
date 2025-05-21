@@ -5,9 +5,11 @@ import 'players_markers.dart';
 import 'printing_board.dart';
 
 class MovingPlayer {
-  final PlayerMarkers _playerMarkers = PlayerMarkers();
-  final ChoosingMode _choosingMode = ChoosingMode();
-  final PrintingBoard _printingBoard = PrintingBoard();
+  final PlayerMarkers _playerMarkers;
+  final ChoosingMode _choosingMode;
+  final PrintingBoard _printingBoard;
+
+  MovingPlayer(this._playerMarkers, this._choosingMode, this._printingBoard);
 
   int getPlayerMove() {
     if (_choosingMode.isVsAI &&
@@ -48,6 +50,6 @@ class MovingPlayer {
         return i;
       }
     }
-    return 0; // Just in case
+    return 0;
   }
 }

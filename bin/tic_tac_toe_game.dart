@@ -1,6 +1,9 @@
+import 'app/service_locator.dart';
 import 'business_logic/tic_tac_toe_start.dart';
 
 void main() {
-  TicTacToe game = TicTacToe();
+  setupServiceLocator();
+
+  TicTacToe game = getIt<TicTacToe>(); 
   game.startGame();
 }

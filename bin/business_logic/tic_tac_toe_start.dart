@@ -4,9 +4,11 @@ import 'playing_game.dart';
 
 class TicTacToe {
 // Start the game
-  final PlayingGame _playingGame = PlayingGame();
-  final ChoosingMode _choosingMode = ChoosingMode();
-  final PlayerMarkers _playerMarkers = PlayerMarkers();
+  final PlayingGame _playingGame;
+  final ChoosingMode _choosingMode;
+  final PlayerMarkers _playerMarkers;
+
+  TicTacToe(this._playingGame, this._choosingMode, this._playerMarkers);
 
   void startGame() {
     print("Welcome to Tic-Tac-Toe!");
