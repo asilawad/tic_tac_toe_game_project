@@ -1,13 +1,14 @@
 import 'dart:io';
 
-import 'choose_mode.dart';
+import 'choosing_mode.dart';
 import 'players_markers.dart';
-import 'print_board.dart';
+import 'printing_board.dart';
 
 class MovingPlayer {
   final PlayerMarkers _playerMarkers = PlayerMarkers();
   final ChoosingMode _choosingMode = ChoosingMode();
   final PrintingBoard _printingBoard = PrintingBoard();
+
   int getPlayerMove() {
     if (_choosingMode.isVsAI &&
         _playerMarkers.currentPlayer == _playerMarkers.playerO) {

@@ -1,6 +1,6 @@
-import 'choose_mode.dart';
+import 'choosing_mode.dart';
 import 'players_markers.dart';
-import 'play_game.dart';
+import 'playing_game.dart';
 
 class TicTacToe {
 // Start the game
