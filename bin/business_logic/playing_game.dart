@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'choosing_mode.dart';
 import 'players_markers.dart';
 import 'moving_player.dart';
 import 'printing_board.dart';
