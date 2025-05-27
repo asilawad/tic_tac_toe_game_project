@@ -11,7 +11,6 @@ class TicTacToe {
   TicTacToe(this._playingGame, this._choosingMode, this._playerMarkers);
 
   void startGame() {
-    print("Welcome to Tic-Tac-Toe!");
     _choosingMode.chooseMode();
     _playerMarkers.chooseMarkers();
     _playingGame.playGame();

@@ -1,8 +1,10 @@
 import 'dart:io';
 
+import '../app/service_locator.dart';
 import 'players_markers.dart';
 import 'moving_player.dart';
 import 'printing_board.dart';
+import 'tic_tac_toe_start.dart';
 
 class PlayingGame {
   final PlayerMarkers _playerMarkers;
@@ -76,7 +78,8 @@ class PlayingGame {
       _printingBoard.board =
           List.generate(9, (index) => (index + 1).toString());
       _playerMarkers.currentPlayer = _playerMarkers.playerX;
-      playGame();
+      print("Welcome to Tic-Tac-Toe Again!");
+      getIt<TicTacToe>().startGame();
     } else {
       print("Thanks for playing!");
     }
